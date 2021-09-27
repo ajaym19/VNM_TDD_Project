@@ -1,0 +1,6 @@
+2021-09-27 20:30:43,328  INFO [main] TestBase:44 - Trying to read browser property
+2021-09-27 20:30:43,332  INFO [main] TestBase:47 - Identified the browser as Chrome and trying to launch the Browser!!!
+2021-09-27 20:30:47,343  INFO [main] TestBase:50 - Browser launched successfully
+2021-09-27 20:30:51,901  INFO [main] TestBase:72 - Application launched successfuly!!!
+2021-09-27 20:30:51,916  INFO [main] TestBase:22 - Starting with validateTitleTest
+2021-09-27 20:30:52,210  INFO [main] TestBase:79 - Chrome Browser closed successfully
