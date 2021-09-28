@@ -6,6 +6,7 @@
       <class name="com.vnm.testcases.LoginPageTest">
         <methods>
           <include name="validateTitleTest"/>
+          <include name="validateLoginTest"/>
           <include name="closeSetup"/>
           <include name="setUp"/>
         </methods>

@@ -39,36 +39,28 @@ public class TestBase {
 
 	public static void initialization() {
 		logger = Logger.getLogger(TestBase.class);
-		System.out.println(1);
-		System.out.println(logger);
 		logger.info("Trying to read browser property");
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
-			logger.info("Identified the browser as " + browser + " and trying to launch the Browser!!!");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			logger.info("Browser launched successfully");
+			logger.info(browser + " Browser launched successfully");
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			logger.info("Identified the browser as " + browser + " and trying to launch the Browser!!!");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			logger.info("Browser launched successfully");
+			logger.info(browser + " Browser launched successfully");
 		} else if (browser.equalsIgnoreCase("ie")) {
-			logger.info("Identified the browser as " + browser + " and trying to launch the Browser!!!");
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
-			logger.info("Browser launched successfully");
+			logger.info(browser + " Browser launched successfully");
 		} else {
 			System.out.println("Browser name is Invalid");
 		}
-
-		// Initializing Logger
-		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+		driver.get(prop.getProperty("url"));
 		logger.info("Application launched successfuly!!!");
 	}
 

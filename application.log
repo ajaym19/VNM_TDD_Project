@@ -1,6 +1,18 @@
-2021-09-27 20:30:43,328  INFO [main] TestBase:44 - Trying to read browser property
-2021-09-27 20:30:43,332  INFO [main] TestBase:47 - Identified the browser as Chrome and trying to launch the Browser!!!
-2021-09-27 20:30:47,343  INFO [main] TestBase:50 - Browser launched successfully
-2021-09-27 20:30:51,901  INFO [main] TestBase:72 - Application launched successfuly!!!
-2021-09-27 20:30:51,916  INFO [main] TestBase:22 - Starting with validateTitleTest
-2021-09-27 20:30:52,210  INFO [main] TestBase:79 - Chrome Browser closed successfully
+2021-09-28 20:22:40,540  INFO [main] TestBase:29 - Trying to read Properties file!!!
+2021-09-28 20:22:40,546  INFO [main] TestBase:32 - Properties file reading Success!!!
+2021-09-28 20:22:40,837  INFO [main] TestBase:42 - Trying to read browser property
+2021-09-28 20:22:45,629  INFO [main] TestBase:47 - Chrome Browser launched successfully
+2021-09-28 20:22:52,978  INFO [main] TestBase:64 - Application launched successfuly!!!
+2021-09-28 20:22:52,981  INFO [main] TestBase:29 - Trying to read Properties file!!!
+2021-09-28 20:22:52,982  INFO [main] TestBase:32 - Properties file reading Success!!!
+2021-09-28 20:22:53,042  INFO [main] TestBase:32 - Starting with validateLoginTest
+2021-09-28 20:22:58,562  INFO [main] TestBase:29 - Trying to read Properties file!!!
+2021-09-28 20:22:58,563  INFO [main] TestBase:32 - Properties file reading Success!!!
+2021-09-28 20:22:58,893  INFO [main] TestBase:71 - Chrome Browser closed successfully
+2021-09-28 20:22:58,897  INFO [main] TestBase:42 - Trying to read browser property
+2021-09-28 20:23:01,229  INFO [main] TestBase:47 - Chrome Browser launched successfully
+2021-09-28 20:23:06,930  INFO [main] TestBase:64 - Application launched successfuly!!!
+2021-09-28 20:23:06,931  INFO [main] TestBase:29 - Trying to read Properties file!!!
+2021-09-28 20:23:06,932  INFO [main] TestBase:32 - Properties file reading Success!!!
+2021-09-28 20:23:06,938  INFO [main] TestBase:24 - Starting with validateTitleTest
+2021-09-28 20:23:07,130  INFO [main] TestBase:71 - Chrome Browser closed successfully
