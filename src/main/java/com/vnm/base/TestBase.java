@@ -12,6 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -19,6 +22,8 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	public static Logger logger;
+	public static ExtentReports extent;
+	public static ExtentSparkReporter reporter;
 
 	public TestBase() {
 
@@ -56,6 +61,7 @@ public class TestBase {
 		} else {
 			System.out.println("Browser name is Invalid");
 		}
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
@@ -66,6 +72,27 @@ public class TestBase {
 
 	// login method and PF
 
+	public void extentReportSetUp() {
+		String reportPath = System.getProperty("user.dir")+ "/Reports/vnm.html";
+		reporter = new ExtentSparkReporter(reportPath);
+		reporter.config().setDocumentTitle("VNM Test Results");
+		reporter.config().setReportName("VNM Automation");
+		extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		extent.setSystemInfo("Project", "VNM Web Application");
+		extent.setSystemInfo("QA Manager", "Ajay Mishra");
+		extent.setSystemInfo("QA Lead", "Jyothi");
+		extent.setSystemInfo("QA", "Iswarya");
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("Sprint", "Sprint 2");
+		
+		//configurations	
+	}
+	
+	public void closeExtentReportSetUp() {
+		extent.flush();
+	}
+	
 	public static void tearDown() {
 		driver.quit();
 		logger.info("Chrome Browser closed successfully");

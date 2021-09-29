@@ -5,8 +5,9 @@
     <classes>
       <class name="com.vnm.testcases.LoginPageTest">
         <methods>
-          <include name="validateTitleTest"/>
-          <include name="validateLoginTest"/>
+          <include name="reportSetup"/>
+          <include name="generateReport"/>
+          <include name="readFromTestNGXML"/>
           <include name="closeSetup"/>
           <include name="setUp"/>
         </methods>
