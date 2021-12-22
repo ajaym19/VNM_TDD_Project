@@ -145,6 +145,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.vnm.listeners.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;Admin&quot;/&gt;
     &lt;classes&gt;
@@ -193,12 +196,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'readFromTestNGXML')
 data.setCell(0, 2, 'com.vnm.testcases.LoginPageTest')
-data.setCell(0, 3, 26);
+data.setCell(0, 3, 23);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 ms</span>
+              <span class="suite-total-time">Total running time: 23 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -242,19 +245,19 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">541 ms</span>
+                <span class="method-start">670 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">readFromTestNGXML(Admin)</span>
-                <span class="method-start">9103 ms</span>
+                <span class="method-start">9500 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeSetup</span>
-                <span class="method-start">9135 ms</span>
+                <span class="method-start">9531 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">9380 ms</span>
+                <span class="method-start">9844 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
